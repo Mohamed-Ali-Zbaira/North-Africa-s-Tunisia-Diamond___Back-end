@@ -1,6 +1,6 @@
 # North Africa's Tunisia Diamond - Back-end
 
-[Watch the Video Presentation]
+
 https://raw.githubusercontent.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___Back-end/main/uploads/InShot_20231223_230000103.mp4
 ## Lien Front-end
 
