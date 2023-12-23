@@ -1,113 +1,72 @@
-# Projet XYZ
+# North Africa's Tunisia Diamond - Back-end
 
-Bienvenue dans le dépôt du projet XYZ ! Ce projet est une application web permettant de gérer des hôtels et des utilisateurs. Ci-dessous, vous trouverez des informations détaillées sur les fonctionnalités, la structure du code, et comment utiliser le projet.
+This repository contains the back-end code for the North Africa's Tunisia Diamond project. It's a Node.js application built with Express.js to manage hotels and users. The application supports features such as adding, retrieving, updating, and deleting hotel information, along with user registration and login.
 
-## Fonctionnalités
+## Table of Contents
+- [Setup](#setup)
+- [Usage](#usage)
+- [Routes](#routes)
+- [Models](#models)
 
-### Gestion des Hôtels (`hotel.js`)
+## Setup
 
-#### 1. Ajouter un hôtel
-- **Endpoint:** `POST /hotel/ajout`
-- **Description:** Ajoute un nouvel hôtel avec une image associée.
-- **Paramètres requis:**
-  - `image`: Image de l'hôtel (Type: File)
-  - `title`: Nom de l'hôtel (Type: String)
-  - `price`: Prix (Type: String)
-  - `phone`: Numéro de téléphone (Type: String)
-  - `description`: Description de l'hôtel (Type: String)
-  - `avis`: Avis sur l'hôtel (Type: String)
-  - `localisation`: Localisation de l'hôtel (Type: String)
-- **Exemple d'utilisation:**
-  ```bash
-  curl -X POST -F "image=@path/to/image.jpg" -F "title=Nom de l'hôtel" -F "price=Prix" -F "phone=Numéro de téléphone" -F "description=Description de l'hôtel" -F "avis=Avis sur l'hôtel" -F "localisation=Localisation de l'hôtel" http://localhost:3000/hotel/ajout
-2. Obtenir tous les hôtels
-Endpoint: GET /hotel/all
-Description: Récupère la liste de tous les hôtels.
-Exemple d'utilisation:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/North-Africa-s-Tunisia-Diamond___Back-end.git
+   cd North-Africa-s-Tunisia-Diamond___Back-end
+Install dependencies:
+
 bash
 Copy code
-curl http://localhost:3000/hotel/all
-3. Obtenir un hôtel par ID
-Endpoint: GET /hotel/getbyid/:id
-Description: Récupère les détails d'un hôtel en fonction de son ID.
-Paramètres requis:
-id: ID de l'hôtel (Type: String)
-Exemple d'utilisation:
+npm install
+Configure MongoDB:
+
+Ensure MongoDB is installed and running.
+Update the MongoDB connection string in the app.js file.
+Start the server:
+
 bash
 Copy code
-curl http://localhost:3000/hotel/getbyid/ID_DE_L_HOTEL
-4. Supprimer un hôtel
-Endpoint: DELETE /hotel/supprimer/:id
-Description: Supprime un hôtel en fonction de son ID.
-Paramètres requis:
-id: ID de l'hôtel à supprimer (Type: String)
-Exemple d'utilisation:
-bash
-Copy code
-curl -X DELETE http://localhost:3000/hotel/supprimer/ID_DE_L_HOTEL
-5. Mettre à jour un hôtel
-Endpoint: PUT /hotel/update/:id
-Description: Met à jour les informations d'un hôtel en fonction de son ID.
-Paramètres requis:
-id: ID de l'hôtel à mettre à jour (Type: String)
-image: Nouvelle image de l'hôtel (Type: File)
-title: Nouveau nom de l'hôtel (Type: String)
-price: Nouveau prix (Type: String)
-phone: Nouveau numéro de téléphone (Type: String)
-description: Nouvelle description de l'hôtel (Type: String)
-avis: Nouvel avis sur l'hôtel (Type: String)
-localisation: Nouvelle localisation de l'hôtel (Type: String)
-Exemple d'utilisation:
-bash
-Copy code
-curl -X PUT -F "image=@path/to/newimage.jpg" -F "title=Nouveau nom" -F "price=Nouveau prix" -F "phone=Nouveau numéro de téléphone" -F "description=Nouvelle description" -F "avis=Nouvel avis" -F "localisation=Nouvelle localisation" http://localhost:3000/hotel/update/ID_DE_L_HOTEL
-Gestion des Utilisateurs (users.js)
-1. Enregistrement d'un utilisateur
-Endpoint: POST /users/register
-Description: Permet à un utilisateur de s'enregistrer avec un nom, un email et un mot de passe.
-Paramètres requis:
-name: Nom de l'utilisateur (Type: String)
-email: Adresse email de l'utilisateur (Type: String)
-password: Mot de passe de l'utilisateur (Type: String)
-Exemple d'utilisation:
-bash
-Copy code
-curl -X POST -d "name=Nom" -d "email=email@example.com" -d "password=motdepasse" http://localhost:3000/users/register
-2. Connexion d'un utilisateur
-Endpoint: POST /users/login
-Description: Permet à un utilisateur de se connecter avec son email et son mot de passe.
-Paramètres requis:
-email: Adresse email de l'utilisateur (Type: String)
-password: Mot de passe de l'utilisateur (Type: String)
-Exemple d'utilisation:
-bash
-Copy code
-curl -X POST -d "email=email@example.com" -d "password=motdepasse" http://localhost:3000/users/login
-3. Obtenir tous les utilisateurs
-Endpoint: GET /users/getAll
-Description: Récupère la liste de tous les utilisateurs enregistrés.
-Exemple d'utilisation:
-bash
-Copy code
-curl http://localhost:3000/users/getAll
-4. Obtenir un utilisateur par ID
-Endpoint: GET /users/getbyid/:id
-Description: Récupère les détails d'un utilisateur en fonction de son ID.
-Paramètres requis:
-id: ID de l'utilisateur (Type: String)
-Exemple d'utilisation:
-bash
-Copy code
-curl http://localhost:3000/users/getbyid/ID_DE_L_UTILISATEUR
-5. Supprimer un utilisateur
-Endpoint: DELETE /users/delete/:id
-Description: Supprime un utilisateur en fonction de son ID.
-Paramètres requis:
-id: ID de l'utilisateur à supprimer (Type: String)
-Exemple d'utilisation:
-bash
-Copy code
-curl -X DELETE http://localhost:3000/users/delete/ID_DE_L_UTILISATEUR
-6. Mettre à jour un utilisateur
-Endpoint: PUT /users/update/:id
-Description: Met à jour les informations d'un utilisateur en fonction de
+npm start
+Usage
+The application exposes RESTful APIs for hotel and user management.
+Utilizes multer for handling file uploads (hotel images).
+Routes
+Hotel Routes
+POST /hotel/ajout: Add a new hotel.
+GET /hotel/all: Retrieve all hotels.
+GET /hotel/getbyid/:id: Retrieve a hotel by ID.
+DELETE /hotel/supprimer/:id: Delete a hotel by ID.
+PUT /hotel/update/:id: Update a hotel by ID.
+User Routes
+POST /users/register: Register a new user.
+POST /users/login: User login.
+Additional User Routes (examples)
+POST /users/add: Add a user.
+POST /users/create: Create a user.
+GET /users/getAll: Retrieve all users.
+GET /users/getAlll: Retrieve users with a specific condition (example: name='Dali').
+GET /users/getbyid/:id: Retrieve a user by ID.
+GET /users/byid/:id: Another way to retrieve a user by ID.
+GET /users/id/:id: Yet another way to retrieve a user by ID.
+DELETE /users/delete/:id: Delete a user by ID.
+PUT /users/update/:id: Update a user by ID.
+Models
+Hotel Model
+Fields:
+id
+title
+price
+phone
+description
+avis
+localisation
+image
+rangshotel
+User Model
+Fields:
+name
+LastName
+password
+email
+role
