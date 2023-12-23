@@ -24,8 +24,8 @@ This repository contains the back-end code for the North Africa's Tunisia Diamon
 -Ensure MongoDB is installed and running.
 -Update the MongoDB connection string in the app.js file.
 4. **Start the server:**
-   ```bash
-   npm start
+    ```bash
+    npm start
 # Usage
 
 The application exposes RESTful APIs for hotel and user management.
