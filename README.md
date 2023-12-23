@@ -2,6 +2,9 @@
 
 [Watch the Video Presentation](https://res.cloudinary.com/dkrfmqbj1/video/upload/v1703369806/Mockup/InShot_20231223_230000103_a5jcha.mp4)
 
+## Front-end
+
+For the front-end code and presentation, visit the [North Africa's Tunisia Diamond Front-end repository](https://github.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___front-end).
 This repository contains the back-end code for the North Africa's Tunisia Diamond project. It's a Node.js application built with Express.js to manage hotels and users. The application supports features such as adding, retrieving, updating, and deleting hotel information, along with user registration and login.
 
 ## Table of Contents
