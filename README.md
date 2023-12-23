@@ -1,7 +1,6 @@
 # North Africa's Tunisia Diamond - Back-end
 
-
-https://raw.githubusercontent.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___Back-end/main/uploads/InShot_20231223_230000103.mp4
+https://github.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___Back-end/blob/main/uploads/InShot_20231223_230000103.mp4
 ## Lien Front-end
 
 For the front-end code and presentation, visit the [North Africa's Tunisia Diamond Front-end repository](https://github.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___front-end).
