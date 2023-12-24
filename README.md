@@ -1,6 +1,6 @@
 # North Africa's Tunisia Diamond - Back-end
 ## Video Sensor
-https://github.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___Back-end/assets/129232389/b4d33d7a-2842-4156-a66e-a76f6980a333
+https://github-production-user-asset-6210df.s3.amazonaws.com/129232389/292649281-b4d33d7a-2842-4156-a66e-a76f6980a333.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231224%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231224T001639Z&X-Amz-Expires=300&X-Amz-Signature=169f0ae30c2284efcdefda1062872138b32b12a1a131fb8e7fb286b063c92c63&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=735157972
 
 For the front-end code and presentation, visit the [North Africa's Tunisia Diamond Front-end repository](https://github.com/Mohamed-Ali-Zbaira/North-Africa-s-Tunisia-Diamond___front-end).
 This repository contains the back-end code for the North Africa's Tunisia Diamond project. It's a Node.js application built with Express.js to manage hotels and users. The application supports features such as adding, retrieving, updating, and deleting hotel information, along with user registration and login.
